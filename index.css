@@ -1,0 +1,13 @@
+.main_Container {
+  position: relative;
+}
+.PacManBox {
+    background: #ff8573;
+    font-size: 25px;
+    width: 10em;
+    height: 10em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
