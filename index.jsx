@@ -91,46 +91,70 @@ var characters = [
             name:"Edible",
             type:"Ghost",
             dirs: {
-                james: ""
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
+            }
+        },
+        {
+            name:"Dying",
+            type:"Dying",
+            dirs: {
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {
             name:"DeadGhost",
             type:"Ghost",
             dirs: {
-                james: ""
-
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {
             name:"Blinky",
             type:"Ghost",
             dirs: {
-                james: ""
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {
             name:"Pinky",
             type:"Ghost",
             dirs: {
-                james: ""
-
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {
             name:"Inky",
             type:"Ghost",
             dirs: {
-                james: ""
-
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {
             name:"Clyde",
             type:"Ghost",
             dirs: {
-                james: ""
-
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
             }
         },
         {

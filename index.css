@@ -1,10 +1,11 @@
 .main_Container {
     position: relative;
     flex-wrap: wrap;
-    font-size: 12px;
-    font-family: monospace;
 }
 
+body {
+    font-size: 30px;
+}
 .center {
     position: relative;
     top: 50%;
@@ -15,7 +16,7 @@
     display: inline-flex;
 }
 .Character {
-    background: url(http://i.imgur.com/8HQFfgG.gif) no-repeat #8b0685;
+    background: url(http://i.imgur.com/tH2Na9q.gif) no-repeat #8b8782;
     background-size: 21em 18em;
     font-size: 2em;
     width: 1em;
@@ -26,7 +27,11 @@
 }
 
 .Ghost {
-    animation: steps(2) 1s;
+    animation: steps(2) .5s;
+}
+
+.Dying {
+    animation: steps(4) 1s;
 }
 
 .animate {
@@ -45,36 +50,36 @@
 }
 
 @keyframes Blinky {
-    0% {background-position: -0em -1em; }
-    100% {background-position: -2em -1em;}
+    0% {background-position: -4em -1em; }
+    100% {background-position: -6em -1em;}
 }
 
 @keyframes Pinky {
-    0% {background-position: -0em -2em; }
-    100% {background-position: -2em -2em;}
+    0% {background-position: -4em -2em; }
+    100% {background-position: -6em -2em;}
 }
 
 @keyframes Inky {
-    0% {background-position: -0em -3em; }
-    100% {background-position: -2em -3em;}
+    0% {background-position: -4em -3em; }
+    100% {background-position: -6em -3em;}
 }
 
 @keyframes Clyde {
-    0% {background-position: -0em -4em; }
-    100% {background-position: -2em -4em;}
+    0% {background-position: -4em -4em; }
+    100% {background-position: -6em -4em;}
 }
 
 @keyframes DeadGhost {
-    0% {background-position: -2em -6em; }
-    100% {background-position: -4em -6em;}
+    0% {background-position: -2em -5em; }
+    100% {background-position: -4em -5em;}
 }
 
 @keyframes Edible {
-    0% {background-position: -0em -6em; }
-    100% {background-position: -2em -6em;}
+    0% {background-position: -0em -5em; }
+    100% {background-position: -2em -5em;}
 }
 
 @keyframes Dying {
-    0% {background-position: -4em -6em; }
-    100% {background-position: -6em -6em;}
+    0% {background-position: -0em -6em; }
+    100% {background-position: -4em -6em;}
 }
