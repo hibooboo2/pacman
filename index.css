@@ -1,13 +1,56 @@
 .main_Container {
   position: relative;
 }
-.PacManBox {
-    background: #ff8573;
-    font-size: 25px;
-    width: 10em;
-    height: 10em;
-    position: absolute;
+
+.center {
+    position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+.PacMan {
+    background: url(http://i.imgur.com/zBQdREx.gif) no-repeat #8b0370;
+    font-size: 15px;
+    width: 1em;
+    height: 1em;
+    border: solid black;
+
+}
+
+.animate {
+    left: 5em;
+    animation: steps(3);
+    animation-iteration-count: infinite;
+}
+
+@keyframes pacMan-left {
+    0% {background-position: -7px -6px; }
+    100% {background-position: -68px -6px; }
+}
+
+@keyframes pacMan-right {
+    0% {background-position: -7px -26px; }
+    50% {background-position: -26px -26px; }
+    100% {background-position: -70px -6px; }
+}
+
+@keyframes msPacMan-left {
+    0% {background-position: -88px -7px; }
+    100% {background-position: -148px -7px; }
+}
+
+@keyframes msPacMan-right {
+    0% {background-position: -88px -27px; }
+    100% {background-position: -148px -27px;}
+}
+
+@keyframes msPacMan-up {
+    0% {background-position: -88px -47px; }
+    100% {background-position: -148px -47px; }
+}
+
+@keyframes msPacMan-down {
+    0% {background-position: -88px -67px; }
+    100% {background-position: -148px -67px; }
 }
