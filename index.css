@@ -1,6 +1,8 @@
 .main_Container {
     position: relative;
     flex-wrap: wrap;
+    font-size: 12px;
+    font-family: monospace;
 }
 
 .center {
@@ -13,9 +15,9 @@
     display: inline-flex;
 }
 .Character {
-    background: url(http://i.imgur.com/2B8SIQ1.gif) no-repeat #8b0685;
+    background: url(http://i.imgur.com/8HQFfgG.gif) no-repeat #8b0685;
     background-size: 21em 18em;
-    font-size: 40px;
+    font-size: 2em;
     width: 1em;
     height: 1em;
 }

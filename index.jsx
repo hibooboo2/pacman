@@ -2,6 +2,7 @@ var PacMan = React.createClass({
     getInitialState: function(){
         //window.addEventListener('DOMMouseScroll', this.changeAnimationSpeed, false);
         //window.addEventListener('mousewheel', this.changeAnimationSpeed, false);
+        console.log(this.props.character.name+this.props.dir);
         return {
             engine: this.props.engine,
             color: "red",
@@ -36,14 +37,15 @@ var PacMan = React.createClass({
         var animationConfig = {
             animationName: this.state.character.name,
             //animationDuration: this.state.animationDuration + "s",
-            transform: this.state.character.dirs[this.state.dir].transform,
             //animationTimingFunction: "steps("+ this.state.character.steps+")",
             animationIterationCount: "infinite"
-    };
+        };
+        if (this.state.character.dirs[this.state.dir].transform !== undefined) {
+            animationConfig.transform =             this.state.character.dirs[this.state.dir].transform;
+        }
         console.log(animationConfig);
         return (
             <div className={"flex Character "+ this.state.character.name + " " + this.state.character.type} style={animationConfig} onWheel={this.changeAnimationSpeed} >
-
             </div>
         )
     }
@@ -69,7 +71,7 @@ var CharacterList = React.createClass({
         var x = [];
         var counter = 0;
         this.state.characters.forEach(function(char){
-            console.log("Char:" + char);
+            console.log("Char:" + char.name);
             for(var dir in char.dirs) {
                 console.log(char + dir);
                 x[counter] = (<PacMan character={char} dir={dir} />);
@@ -89,13 +91,14 @@ var characters = [
             name:"Edible",
             type:"Ghost",
             dirs: {
-
+                james: ""
             }
         },
         {
             name:"DeadGhost",
             type:"Ghost",
             dirs: {
+                james: ""
 
             }
         },
@@ -103,13 +106,14 @@ var characters = [
             name:"Blinky",
             type:"Ghost",
             dirs: {
-
+                james: ""
             }
         },
         {
             name:"Pinky",
             type:"Ghost",
             dirs: {
+                james: ""
 
             }
         },
@@ -117,6 +121,7 @@ var characters = [
             name:"Inky",
             type:"Ghost",
             dirs: {
+                james: ""
 
             }
         },
@@ -124,6 +129,7 @@ var characters = [
             name:"Clyde",
             type:"Ghost",
             dirs: {
+                james: ""
 
             }
         },
