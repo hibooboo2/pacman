@@ -1,56 +1,85 @@
 .main_Container {
-  position: relative;
+    position: relative;
+    flex-wrap: wrap;
 }
 
+body {
+    font-size: 30px;
+}
 .center {
     position: relative;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.PacMan {
-    background: url(http://i.imgur.com/zBQdREx.gif) no-repeat #8b0370;
-    font-size: 15px;
+.flex {
+    display: inline-flex;
+}
+.Character {
+    background: url(http://i.imgur.com/tH2Na9q.gif) no-repeat #8b8782;
+    background-size: 21em 18em;
+    font-size: 2em;
     width: 1em;
     height: 1em;
-    border: solid black;
+}
+.PacPerson {
+    animation: steps(3) .4s;
+}
 
+.Ghost {
+    animation: steps(2) .5s;
+}
+
+.Dying {
+    animation: steps(4) 1s;
 }
 
 .animate {
     left: 5em;
-    animation: steps(3);
     animation-iteration-count: infinite;
 }
 
-@keyframes pacMan-left {
-    0% {background-position: -7px -6px; }
-    100% {background-position: -68px -6px; }
+@keyframes PacMan {
+    0% {background-position: 0em 0em; }
+    100% {background-position: -3em 0em; }
 }
 
-@keyframes pacMan-right {
-    0% {background-position: -7px -26px; }
-    50% {background-position: -26px -26px; }
-    100% {background-position: -70px -6px; }
+@keyframes MsPacMan {
+    0% {background-position: -3em -0em; }
+    100% {background-position: -6em -0em; }
 }
 
-@keyframes msPacMan-left {
-    0% {background-position: -88px -7px; }
-    100% {background-position: -148px -7px; }
+@keyframes Blinky {
+    0% {background-position: -4em -1em; }
+    100% {background-position: -6em -1em;}
 }
 
-@keyframes msPacMan-right {
-    0% {background-position: -88px -27px; }
-    100% {background-position: -148px -27px;}
+@keyframes Pinky {
+    0% {background-position: -4em -2em; }
+    100% {background-position: -6em -2em;}
 }
 
-@keyframes msPacMan-up {
-    0% {background-position: -88px -47px; }
-    100% {background-position: -148px -47px; }
+@keyframes Inky {
+    0% {background-position: -4em -3em; }
+    100% {background-position: -6em -3em;}
 }
 
-@keyframes msPacMan-down {
-    0% {background-position: -88px -67px; }
-    100% {background-position: -148px -67px; }
+@keyframes Clyde {
+    0% {background-position: -4em -4em; }
+    100% {background-position: -6em -4em;}
+}
+
+@keyframes DeadGhost {
+    0% {background-position: -2em -5em; }
+    100% {background-position: -4em -5em;}
+}
+
+@keyframes Edible {
+    0% {background-position: -0em -5em; }
+    100% {background-position: -2em -5em;}
+}
+
+@keyframes Dying {
+    0% {background-position: -0em -6em; }
+    100% {background-position: -4em -6em;}
 }
