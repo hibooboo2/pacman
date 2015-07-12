@@ -21,10 +21,6 @@ var PacMan = React.createClass({
         // from the page and destroyed. We can clear the interval here:
         console.log("hi");
     },
-    flip: function(){
-        this.state.engine.on = !this.state.engine.gameOn;
-        this.setState({engine: this.state.engine});
-    },
     changeAnimationSpeed: function(e){
         console.log("e");
         if ( e.wheelDelta > 0 ) {
