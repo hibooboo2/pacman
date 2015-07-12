@@ -1,12 +1,13 @@
 var PacMan = React.createClass({
     getInitialState: function(){
-        window.addEventListener('DOMMouseScroll', this.changeAnimationSpeed, false);
-        window.addEventListener('mousewheel', this.changeAnimationSpeed, false);
+        //window.addEventListener('DOMMouseScroll', this.changeAnimationSpeed, false);
+        //window.addEventListener('mousewheel', this.changeAnimationSpeed, false);
         return {
             engine: this.props.engine,
             color: "red",
             character: this.props.character,
-            animationDuration: 1
+            //animationDuration: 1,
+            dir: this.props.dir
         };
     },
     componentDidMount: function(){
@@ -33,11 +34,15 @@ var PacMan = React.createClass({
     },
     render: function(){
         var animationConfig = {
-            animationName:this.state.character,
-            animationDuration: this.state.animationDuration + "s"
-        };
+            animationName: this.state.character.name,
+            //animationDuration: this.state.animationDuration + "s",
+            transform: this.state.character.dirs[this.state.dir].transform,
+            //animationTimingFunction: "steps("+ this.state.character.steps+")",
+            animationIterationCount: "infinite"
+    };
+        console.log(animationConfig);
         return (
-            <div className={"PacMan animate"} style={animationConfig} onWheel={this.changeAnimationSpeed} >
+            <div className={"flex Character "+ this.state.character.name + " " + this.state.character.type} style={animationConfig} onWheel={this.changeAnimationSpeed} >
 
             </div>
         )
@@ -47,7 +52,7 @@ var PacMan = React.createClass({
 var CharacterList = React.createClass({
     getInitialState: function(){
         return {
-            characters: this.props.characters
+            characters: this.props.characters,
         };
     },
     comonentDidMount: function(){
@@ -62,9 +67,14 @@ var CharacterList = React.createClass({
     },
     render: function() {
         var x = [];
-        this.state.characters.forEach(function(char, i){
+        var counter = 0;
+        this.state.characters.forEach(function(char){
             console.log("Char:" + char);
-            x[i] = (<PacMan character={char} />);
+            for(var dir in char.dirs) {
+                console.log(char + dir);
+                x[counter] = (<PacMan character={char} dir={dir} />);
+                counter++;
+            }
         });
         console.log(x);
         return (
@@ -74,8 +84,72 @@ var CharacterList = React.createClass({
         )
     }
 });
-chars = ["pacMan-left", "pacMan-right", "msPacMan-left", "msPacMan-right" , "msPacMan-up", "msPacMan-down"];
+var characters = [
+        {
+            name:"Edible",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"DeadGhost",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"Blinky",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"Pinky",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"Inky",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"Clyde",
+            type:"Ghost",
+            dirs: {
+
+            }
+        },
+        {
+            name:"MsPacMan",
+            type:"PacPerson",
+            dirs: {
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
+            }
+        },
+        {
+            name:"PacMan",
+            type:"PacPerson",
+            dirs: {
+                left: { transform: "rotate(0deg)" },
+                up: { transform: "rotate(90deg)" },
+                right: { transform: "rotate(180deg)" },
+                down: { transform: "rotate(270deg)" }
+            }
+        }
+    ];
+
 React.render(
-  <CharacterList characters={chars} />,
-  document.getElementById('main_Container')
+    <CharacterList characters={characters} />,
+    document.getElementById('main_Container')
 );

@@ -1,5 +1,6 @@
 .main_Container {
-  position: relative;
+    position: relative;
+    flex-wrap: wrap;
 }
 
 .center {
@@ -8,49 +9,65 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-.PacMan {
+.flex {
+    display: inline-flex;
+}
+.Character {
     background: url(http://i.imgur.com/zBQdREx.gif) no-repeat #8b0370;
-    font-size: 15px;
-    width: 1em;
-    height: 1em;
-    border: solid black;
+    background-size: 81em 71em;
+    font-size: 10px;
+    width: 3.3em;
+    height: 3.3em;
+}
+.PacPerson {
+    animation: steps(3) 3s;
+}
 
+.Ghost {
+    animation: steps(2) 1s;
 }
 
 .animate {
     left: 5em;
-    animation: steps(3);
     animation-iteration-count: infinite;
 }
 
-@keyframes pacMan-left {
-    0% {background-position: -7px -6px; }
-    100% {background-position: -68px -6px; }
+@keyframes PacMan {
+    0% {background-position: -1.5em -1.75em; }
+    100% {background-position: -17em -1.75em; }
 }
 
-@keyframes pacMan-right {
-    0% {background-position: -7px -26px; }
-    50% {background-position: -26px -26px; }
-    100% {background-position: -70px -6px; }
+@keyframes MsPacMan {
+    0% {background-position: -22em -1.75em; }
+    100% {background-position: -37em -1.75em; }
 }
 
-@keyframes msPacMan-left {
-    0% {background-position: -88px -7px; }
-    100% {background-position: -148px -7px; }
+@keyframes Blinky {
+    0% {background-position: -1.75em -22em; }
+    100% {background-position: -12em -22em;}
 }
 
-@keyframes msPacMan-right {
-    0% {background-position: -88px -27px; }
-    100% {background-position: -148px -27px;}
+@keyframes Inky {
+    0% {background-position: -7px -127px; }
+    100% {background-position: -47px -127px;}
 }
 
-@keyframes msPacMan-up {
-    0% {background-position: -88px -47px; }
-    100% {background-position: -148px -47px; }
+@keyframes Pinky {
+    0% {background-position: -7px -107px; }
+    100% {background-position: -47px -107px;}
 }
 
-@keyframes msPacMan-down {
-    0% {background-position: -88px -67px; }
-    100% {background-position: -148px -67px; }
+@keyframes Clyde {
+    0% {background-position: -7px -147px; }
+    100% {background-position: -47px -147px;}
+}
+
+@keyframes DeadGhost {
+    0% {background-position: -47px -167px; }
+    100% {background-position: -87px -167px;}
+}
+
+@keyframes Edible {
+    0% {background-position: -7px -167px; }
+    100% {background-position: -47px -167px;}
 }
