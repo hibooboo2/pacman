@@ -16,8 +16,8 @@ body {
     display: inline-flex;
 }
 .Character {
-    background: url(http://i.imgur.com/qrr0GDH.gif) no-repeat #8b8782;
-    background-size: 21em 18em;
+    background: url(http://i913.photobucket.com/albums/ac331/Superjustinbros/Sprite%20Sheets/ChampPac-EmSpriteProject.png) no-repeat #8b8782;
+    background-size: 55.444666em 25.44333em;
     font-size: 2em;
     width: 1em;
     height: 1em;
@@ -31,7 +31,7 @@ body {
 }
 
 .Dying {
-    animation: steps(4) 1s;
+    animation: steps(2) .5s;
 }
 
 .animate {
@@ -40,46 +40,46 @@ body {
 }
 
 @keyframes PacMan {
-    0% {background-position: 0em 0em; }
-    100% {background-position: -3em 0em; }
+    0% {background-position: -15em 0em; }
+    100% {background-position: -18.2em 0em; }
 }
 
 @keyframes MsPacMan {
-    0% {background-position: -3em -0em; }
-    100% {background-position: -6em -0em; }
+    0% {background-position: -15em -16.7em; }
+    100% {background-position: -18.2em -16.7em; }
 }
 
 @keyframes Blinky {
-    0% {background-position: -4em -1em; }
-    100% {background-position: -6em -1em;}
+    0% {background-position: -15em -4.5em; }
+    100% {background-position: -17.15em -4.5em;}
 }
 
 @keyframes Pinky {
-    0% {background-position: -4em -2em; }
-    100% {background-position: -6em -2em;}
+    0% {background-position: -15em -5.6em; }
+    100% {background-position: -17.15em -5.6em;}
 }
 
 @keyframes Inky {
-    0% {background-position: -4em -3em; }
-    100% {background-position: -6em -3em;}
+    0% {background-position: -17.15em -6.7em; }
+    100% {background-position: -19.3em -6.7em;}
 }
 
 @keyframes Clyde {
-    0% {background-position: -4em -4em; }
-    100% {background-position: -6em -4em;}
+    0% {background-position: -15em -7.8em; }
+    100% {background-position: -17.15em -7.8em;}
 }
 
 @keyframes DeadGhost {
-    0% {background-position: -2em -5em; }
-    100% {background-position: -4em -5em;}
+    0% {background-position: -24.5em -5.5em; }
+    100% {background-position: -26.65em -5.5em;}
 }
 
 @keyframes Edible {
-    0% {background-position: -0em -5em; }
-    100% {background-position: -2em -5em;}
+    0% {background-position: -23.5em -4.5em; }
+    100% {background-position: -25.65em -4.5em;}
 }
 
 @keyframes Dying {
-    0% {background-position: -0em -6em; }
-    100% {background-position: -4em -6em;}
+    0% {background-position: -24.5em -4.5em; }
+    100% {background-position: -26.65em -4.5em;}
 }
