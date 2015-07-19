@@ -179,3 +179,7 @@ React.render(
     <CharacterList characters={characters} />,
     document.getElementById('main_Container')
 );
+React.render(
+    <KeyMapper toCall={function(){console.log("You got it working.")}} toCallName="Working" keyToUse="a a"/>,
+    document.getElementById('chat_Container')
+);
